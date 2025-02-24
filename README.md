@@ -188,11 +188,25 @@ while not adivinado:
 ### 5. Robot Explorador
 **Descripción**: Se genera una matriz con obstáculos aleatorios. Un robot inicia en la esquina superior izquierda y debe encontrar su camino hasta la salida.  
 **Solución**: Se generó una matriz con obstáculos aleatorios y se implementó una lógica para que el robot intentara encontrar un camino hacia la meta.  
-**Código**: Esta disponible en el repositorio.
+**Código**: Esta disponible en el repositorio como Lab1.5
 
 
 ### 6. Gestión de Inventario
 **Descripción**: Este programa permite gestionar productos en una tienda mediante un menú interactivo. Se implementa en POO con la clase Producto y la clase Inventario para almacenar y manipular productos.  
-**Solución**: Se creó un sistema en Python utilizando POO, permitiendo agregar productos, venderlos, verificar disponibilidad e imprimir el inventario.  
-**Código**: Esta disponible en el repositorio.
+**Solución**: Se creó un sistema en Python utilizando POO, permitiendo agregar productos, venderlos, verificar disponibilidad e imprimir el inventario. En la primera parte del programa se crean las clases Producto y Tienda, con sus caracteristicas y funciones, como se denota a continuacion:  
+- Producto:
+  - Nombre
+  - Precio
+  - Cantidad
+  - Vender: Accion que resta la Cantidad del producto.
+  - Mostrar_info: Accion que muestra los valores actuales del objeto (Nombre, precio y cantidad).
+- Tienda:
+  - Init: Esta accion inicia el proyecto y genera la variable inventario que esta vacia para almacenar los productos.
+  - Agregar_producto: Esta accion genera un objeto de la clase Producto, para lo cual solicita al usuario el nombre, la cantidad y el valor de este; y lo almacena en la variable inventario.
+  - Vender_producto: Esta accion solicita al usuario el nombre y la cantidad del producto a vender, para despues buscarlo en la variable inventario, en caso de encontrarlo y tener suficientes vende el producto llamando al metodo vender; en caso de no ser asi el programa dira que no esta disponible.
+  - Verificar_disponibilidad: Esta accion solicita al usuario el nombre de un producto y verifica si hay disponibilidad, para despues decir cuantos hay si es el caso o decir que no hay existencias.
+  - Mostar_inventario: Esta accion imprime una lista de los productos disponibles con la cantidad y precio de estos, en caso de que no haya ninguno el programa dira que el inventario esta vacio,
+  - Ejecutar: Esta accion ejecuta el programa y despliega un menu de las opciones que hace el programa, despues solicita al usuario un valor del 1 al 5 segun sea la opcion a usar. Dependiendo de esta respuesta el codigo ejecuta alguna de las acciones antes mencionadas, excepto el numero 5 en el cual se imprime una linea que diga saliendo del programa y termina la ejecucion de este. En caso de que el usuario de un numero fuera de los parametros esperados el codigo solicitara intentar nuevamente.  
+Por ultimo en el codigo se inicializan la variable tienda y se ejecuta la accion ejecutar.
+**Código**: Esta disponible en el repositorio como Lab1.6
 
